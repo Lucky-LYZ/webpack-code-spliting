@@ -5,7 +5,7 @@
 	"author": "liuyzhm",
 	"license": "MIT",
 	"scripts": {
-		"multi-entry": "webpack --config webpack-multi-entry-config.js",
+		"multi-entry": "webpack --config ./config/webpack-multi-entry-config.js",
 		"dev": "webpack-dev-server"
 	},
 	"devDependencies": {
