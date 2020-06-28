@@ -1,6 +1,6 @@
 import fetchApi from '../../common/fetch'
 import '../../common/global.css'
-import './album.css'
+import './index.css'
 
 const mainElement = document.querySelector('.main')
 
