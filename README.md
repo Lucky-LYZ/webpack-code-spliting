@@ -2,7 +2,7 @@
 
 webpack code-spliting demo.
 
-## 三种方案
+## 三种方案（多入口打包；公共文件提取；按需加载）
 
 ```
 通过执行不同的webpack配置文件，针对不同功能点进行打包
@@ -16,5 +16,10 @@ webpack code-spliting demo.
 ![blockchain](https://github.com/Lucky-LYZ/webpack-code-spliting/blob/master/src/01-multi-entry/assets/img/%E8%87%AA%E5%8A%A8%E5%BC%95%E5%85%A5%E5%85%AC%E5%85%B1%E6%89%93%E5%8C%85%E7%9A%84%E4%BB%A3%E7%A0%81.png "自动引入公共打包的代码")
 
 ### 2、按需加载
+
+![blockchain](https://github.com/Lucky-LYZ/webpack-code-spliting/blob/master/src/02-dynamic-import/assets/img/%E6%8C%89%E9%9C%80%E5%AF%BC%E5%85%A52.png "按需导入情况下，打包生成的所有文件")
+![blockchain](https://github.com/Lucky-LYZ/webpack-code-spliting/blob/master/src/02-dynamic-import/assets/img/%E9%9D%9E%E6%8C%89%E9%9C%80%E5%AF%BC%E5%85%A52.png "非按需导入情况下，打包生成的所有文件")
+![blockchain](https://github.com/Lucky-LYZ/webpack-code-spliting/blob/master/src/02-dynamic-import/assets/img/%E6%8C%89%E9%9C%80%E5%AF%BC%E5%85%A5.png "按需导入情况下，打包生成的html文件详情")
+![blockchain](https://github.com/Lucky-LYZ/webpack-code-spliting/blob/master/src/02-dynamic-import/assets/img/%E9%9D%9E%E6%8C%89%E9%9C%80%E5%AF%BC%E5%85%A5.png "非按需导入情况下，打包生成的html文件详情")
 
 ## 其他
