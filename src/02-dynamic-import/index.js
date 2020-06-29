@@ -7,11 +7,11 @@
  * 除此之外，魔法注释还有个特殊用途：如果你的 webpackChunkName 相同的话，那相同的 webpackChunkName 最终就会被打包到一起。如果下述posts、album这两个 webpackChunkName 都设置为 components，再次运行打包，会将这两个模块打包到一个components.bundle.js文件中
  */
 const render = () => {
-  const hash = window.location.hash || '#posts'
+  const hash = window.location.hash || '#posts';
 
-  const mainElement = document.querySelector('.main')
+  const mainElement = document.querySelector('.main');
 
-  mainElement.innerHTML = ''
+  mainElement.innerHTML = '';
 
   if (hash === '#posts') {
     // mainElement.appendChild(posts()); //旧版的方式，直接将数据添加到DOM中
@@ -29,6 +29,6 @@ const render = () => {
   }
 }
 
-render()
+render();
 
-window.addEventListener('hashchange', render)
+window.addEventListener('hashchange', render);
