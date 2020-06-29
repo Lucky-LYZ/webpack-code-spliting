@@ -14,7 +14,7 @@ module.exports = {
     page2: './src/01-multi-entry/pages/page2/index.js'
   },
   output: {
-    path: path.resolve(__dirname, "../dist", "multi"), //所有输出文件的目标路径;必须是绝对路径
+    path: path.resolve(__dirname, "../dist", "multi"), //所有输出文件的目标路径;path的值必须是绝对路径（通过resolve()方法生成）
     filename: '[name].bundle.js', // 指定输出的文件名，[name]会被替换为entry的属性名
   },
   optimization: {

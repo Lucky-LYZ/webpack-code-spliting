@@ -6,7 +6,8 @@ webpack code-spliting demo.
 
 ```
 通过执行不同的webpack配置文件，针对不同功能点进行打包
-例如： `npm run build-multi` 命令，用于验证多入口打包与公共文件单独导出
+- `npm run build-dynamic` 命令，用于验证按需动态加载；
+- `npm run build-multi` 命令，用于验证多入口打包与公共文件单独导出；
 ```
 
 ### 1、多入口打包&公共文件提取
