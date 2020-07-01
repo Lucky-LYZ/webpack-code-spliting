@@ -164,28 +164,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _common_global_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_common_global_css__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6);
 /* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_index_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _test1__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(8);
+/* harmony import */ var _test2__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(10);
 
 
 
 
-const mainElement = document.querySelector('.main')
+
+
+const mainElement = document.querySelector('.main');
 
 Object(_common_fetch__WEBPACK_IMPORTED_MODULE_0__["default"])('/posts').then(data => {
-  mainElement.innerHTML = '' // remove loading
+  mainElement.innerHTML = ''; // remove loading
 
+  mainElement.appendChild(_test1__WEBPACK_IMPORTED_MODULE_3__["default"]);
+  mainElement.appendChild(_test2__WEBPACK_IMPORTED_MODULE_4__["default"]);
   data.forEach(item => {
-    const article = document.createElement('article')
-    article.className = 'post'
+    const article = document.createElement('article');
+    article.className = 'post';
 
-    const h2 = document.createElement('h2')
-    h2.textContent = item.title
-    article.appendChild(h2)
+    const h2 = document.createElement('h2');
+    h2.textContent = item.title;
+    article.appendChild(h2);
 
-    const paragraph = document.createElement('p')
-    paragraph.textContent = item.body
-    article.appendChild(paragraph)
+    const paragraph = document.createElement('p');
+    paragraph.textContent = item.body;
+    article.appendChild(paragraph);
 
-    mainElement.appendChild(article)
+    mainElement.appendChild(article);
   })
 })
 
@@ -231,6 +237,63 @@ exports.push([module.i, ".post + .post {\r\n  border-top: 1px solid #eee;\r\n}\r
 // Exports
 module.exports = exports;
 
+
+/***/ }),
+/* 8 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _common_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
+
+
+
+
+const h2 = document.createElement('h2');
+h2.textContent = 'test1:' + Object(_common_common__WEBPACK_IMPORTED_MODULE_0__["getMsg"])();
+
+/* harmony default export */ __webpack_exports__["default"] = (h2);
+
+/***/ }),
+/* 9 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getMsg", function() { return getMsg; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "noUse", function() { return noUse; });
+
+/**
+ * @function test1.js test2.js同时引用
+ */
+function getMsg () {
+    return '我用来测试，同一个入口文件内，多个独立组件共同引用一个依赖方法，最终的打包效果。'
+}
+
+
+/**
+ * @function 没有任何引用的地方
+ */
+function noUse () {
+    return '我用来测试，没有被使用的方法，打包之后的效果。'
+}
+
+/***/ }),
+/* 10 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _common_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
+
+
+
+
+
+const h4 = document.createElement('h4');
+h4.textContent = 'test2:' + Object(_common_common__WEBPACK_IMPORTED_MODULE_0__["getMsg"])();
+
+/* harmony default export */ __webpack_exports__["default"] = (h4);
 
 /***/ })
 /******/ ]);

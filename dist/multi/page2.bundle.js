@@ -148,28 +148,14 @@
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push([8,1]);
+/******/ 	deferredModules.push([11,1]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 10:
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(5);
-exports = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-exports.push([module.i, ".main {\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n}\r\n\r\n.photo {\r\n  width: 250px;\r\n  margin-bottom: 20px;\r\n  text-align: center;\r\n}\r\n\r\n.photo img {\r\n  width: 200px;\r\n}\r\n\r\n.photo h2 {\r\n  padding: 0 10px;\r\n  overflow: hidden;\r\n  white-space: nowrap;\r\n  text-overflow: ellipsis;\r\n  font-size: 20px;\r\n}\r\n", ""]);
-// Exports
-module.exports = exports;
-
-
-/***/ }),
-
-/***/ 8:
+/***/ 11:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -177,41 +163,41 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _common_fetch__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _common_global_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var _common_global_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_common_global_css__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
+/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(12);
 /* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_index_css__WEBPACK_IMPORTED_MODULE_2__);
 
 
 
 
-const mainElement = document.querySelector('.main')
+const mainElement = document.querySelector('.main');
 
 Object(_common_fetch__WEBPACK_IMPORTED_MODULE_0__["default"])('/photos?albumId=1').then(data => {
-  mainElement.innerHTML = '' // remove loading
+  mainElement.innerHTML = ''; // remove loading
 
   data.forEach(item => {
-    const section = document.createElement('section')
-    section.className = 'photo'
+    const section = document.createElement('section');
+    section.className = 'photo';
 
-    const img = document.createElement('img')
-    img.src = item.thumbnailUrl
-    section.appendChild(img)
+    const img = document.createElement('img');
+    img.src = item.thumbnailUrl;
+    section.appendChild(img);
 
-    const h2 = document.createElement('h2')
-    h2.textContent = item.title
-    section.appendChild(h2)
+    const h2 = document.createElement('h2');
+    h2.textContent = item.title;
+    section.appendChild(h2);
 
-    mainElement.appendChild(section)
+    mainElement.appendChild(section);
   })
 })
 
 
 /***/ }),
 
-/***/ 9:
+/***/ 12:
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(3);
-            var content = __webpack_require__(10);
+            var content = __webpack_require__(13);
 
             content = content.__esModule ? content.default : content;
 
@@ -229,6 +215,20 @@ var update = api(content, options);
 
 
 module.exports = content.locals || {};
+
+/***/ }),
+
+/***/ 13:
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(5);
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, ".main {\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n}\r\n\r\n.photo {\r\n  width: 250px;\r\n  margin-bottom: 20px;\r\n  text-align: center;\r\n}\r\n\r\n.photo img {\r\n  width: 200px;\r\n}\r\n\r\n.photo h2 {\r\n  padding: 0 10px;\r\n  overflow: hidden;\r\n  white-space: nowrap;\r\n  text-overflow: ellipsis;\r\n  font-size: 20px;\r\n}\r\n", ""]);
+// Exports
+module.exports = exports;
+
 
 /***/ })
 
