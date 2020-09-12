@@ -16,8 +16,8 @@ module.exports = {
      * @description entry为一个对象，每个属性名代表一个入口，属性值为入口js文件的地址，打包结果是相应的生成多套文件；
      * 当entry为数组时，表示将数组的所有文件打包为一个文件；
      */
-    page1: './src/01-multi-entry/pages/page1/index.js',
-    page2: './src/01-multi-entry/pages/page2/index.js'
+    page1: './src/multi-entry/pages/page1/index.js',
+    page2: './src/multi-entry/pages/page2/index.js'
   },
   output: {
     path: path.resolve(__dirname, "../dist", "multi"), //所有输出文件的目标路径;path的值必须是绝对路径（通过resolve()方法生成）
@@ -45,13 +45,13 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Multi Entry',
-      template: './src/01-multi-entry/templates/page1.html',
+      template: './src/multi-entry/templates/page1.html',
       filename: 'page1.html',
       chunks: ['page1'], // 为page1指定特定的html模板文件
     }),
     new HtmlWebpackPlugin({
       title: 'Multi Entry',
-      template: './src/01-multi-entry/templates/page2.html',
+      template: './src/multi-entry/templates/page2.html',
       filename: 'page2.html',
       chunks: ['page2'], // 为page2指定特定的html模板文件
     })
